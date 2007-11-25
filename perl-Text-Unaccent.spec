@@ -1,7 +1,7 @@
 %define real_name Text-Unaccent
 %define name perl-%{real_name}
 %define version 1.08
-%define release %mkrel 5
+%define release %mkrel 8
 
 Summary:	Remove accents from a string
 Name:		%{name}
@@ -10,8 +10,8 @@ Release:	%{release}
 License:	GPL or Artistic
 Group:		Development/Perl
 Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Text//%{real_name}-%{version}.tar.bz2
+Patch0:      Text-Unaccent-size_t.patch
 URL:		http://search.cpan.org/dist/%{real_name}/
-ExcludeArch:    x86_64
 BuildRequires:  perl-devel
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 
@@ -23,6 +23,7 @@ with iconv(1).
 
 %prep
 %setup -q -n %{real_name}-%{version}
+%patch0 -p0 -b .size_t
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
