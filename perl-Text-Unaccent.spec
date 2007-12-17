@@ -13,7 +13,6 @@ Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Text//%{real_name}-%{vers
 Patch0:      Text-Unaccent-size_t.patch
 URL:		http://search.cpan.org/dist/%{real_name}/
 BuildRequires:  perl-devel
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 
 %description
 A module that remove accents from a string. unac_string converts the input
