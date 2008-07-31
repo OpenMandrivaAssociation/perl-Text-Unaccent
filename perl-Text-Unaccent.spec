@@ -1,7 +1,7 @@
 %define real_name Text-Unaccent
 %define name perl-%{real_name}
 %define version 1.08
-%define release %mkrel 11
+%define release %mkrel 12
 
 Summary:	Remove accents from a string
 Name:		%{name}
