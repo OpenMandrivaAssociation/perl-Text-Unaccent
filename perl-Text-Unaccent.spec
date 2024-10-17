@@ -8,7 +8,7 @@ Release:	5
 Summary:	Remove accents from a string
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}/
+Url:		https://search.cpan.org/dist/%{upstream_name}/
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Text//%{upstream_name}-%{upstream_version}.tar.bz2
 Patch0:      Text-Unaccent-size_t.patch
 
