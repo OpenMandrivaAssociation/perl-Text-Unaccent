@@ -12,6 +12,7 @@ Url:		https://search.cpan.org/dist/%{upstream_name}/
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Text//%{upstream_name}-%{upstream_version}.tar.bz2
 Patch0:      Text-Unaccent-size_t.patch
 
+BuildRequires:	make
 BuildRequires:  perl-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
