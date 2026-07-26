@@ -1,15 +1,13 @@
 %define upstream_name    Text-Unaccent
-%define upstream_version 1.08
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:	6
+Version:    1.08
+Release:	7
 
 Summary:	Remove accents from a string
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Text-Unaccent
-Source0:	https://cpan.metacpan.org/authors/id/L/LD/LDACHARY/Text-Unaccent-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/L/LD/LDACHARY/Text-Unaccent-%{version}.tar.gz
 Patch0:      Text-Unaccent-size_t.patch
 
 BuildRequires:	make
@@ -23,7 +21,7 @@ return the unaccented equivalent. The conversion from and to UTF-16 is done
 with iconv(1).
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 %patch0 -p0 -b .size_t
 
 %build
@@ -57,9 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 
 * Mon Aug 03 2009 Jérôme Quelin <jquelin@mandriva.org> 1.80.0-1mdv2010.0
 + Revision: 408090
-- rebuild using %%perl_convert_version
-
-* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 1.08-12mdv2009.0
+- rebuild using %1.08 Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 1.08-12mdv2009.0
 + Revision: 258622
 - rebuild
 
